@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <!-- <script src="all.js"></script> -->
+    <!-- ######## swiiper cdn ################### -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+    <!--=================== font awsome link========================= -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <main>
+        <header>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About us</a></li>
+                <li><a href="#">Contact us</a></li>
+                <li><a href="#">services</a></li>
+                <li><a href="#">New page</a></li>
+                <li><a href="#">Designing to next level</a></li>
+            </ul>
+        </header>
+        <section class="sectionfirst">
+            <div class="inner_icon">
+                <i class="fa-brands fa-rocketchat"></i>
+            </div>
+            <div class="chat_box">
+            </div>
+            <div class="paly">
+                <audio src="./music/Imaginary Ones.mp3" class="song"></audio>
+            </div>
+            <div class="play_icon">
+                <i class="fa-solid fa-play" onclick="clickToPlay()"></i>
+                <i class="fa-solid fa-pause" onclick="clickToStop()"></i>
+            </div>
+            
+        </section>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script>
+        $(document).ready(function(){   
+            $('.inner_icon').click(function(){
+                $('.chat_box').toggleClass('active');})
+                $('.fa-play').click(function(){
+                    $('.fa-pause').fadeIn();
+                    $('.fa-play').hide();
+                    
+                })
+
+
+
+                $('.fa-pause').click(function(){
+                    $('.fa-play').fadeIn();
+                    $('.fa-pause').hide();
+                    
+                })
+
+})
+var clickToPlay=()=>{
+    var audio=document.getElementsByClassName('song');
+    audio[0].play();
+}
+var clickToStop=()=>{
+    var audio=document.getElementsByClassName('song');
+    audio[0].pause();
+}
+
+
+
+    </script>
+</body>
+
+</html>
